@@ -13,6 +13,8 @@ $(document).ready(function () {
             data: formData,
             success: function (response) {
                 alert(response);
+                // Save the token in the local storage
+                localStorage.setItem('userToken', response.token);
             },
             error: function (response) {
                 alert('Error: ' + response);
