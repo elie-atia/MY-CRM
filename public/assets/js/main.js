@@ -9,7 +9,7 @@ $(document).ready(function() {
         
         var formData = {
             name: $("#name").val(),
-            email: $("#email").val(),
+            email: $("#email").val(), 
             phone: $("#phone").val(),
             company: $("#company").val()
         };
