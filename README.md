@@ -34,3 +34,16 @@ To run this project locally, follow the steps below:
 ## License
 
 MIT
+
+## Usefull commands
+
+    -->open mysql shell. 
+    -->run:   \sql 
+    -->run:   \connect elie@localhost
+    -->run    CREATE DATABASE my_db;
+    -->run    SHOW DATABASES;
+    -->connect via php file, using mysqli 
+    -->Crud operation: CREATE TABLE, INSERT INTO, SELECT, UPDATE, DELETE FROM...
+    --> run mysql server: open powershell as administrator and run this: 
+                    - cd "C:\Program Files\MySQL\MySQL Server 8.0\bin" 
+                    - mysqld
