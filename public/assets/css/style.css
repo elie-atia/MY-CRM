@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "BagnardStyle";
+    src: url("./Bagnard.otf");
+  }
+
+
+  body {
+    font-family: "BagnardStyle", sans-serif;
+  }

@@ -1,5 +1,8 @@
 <?php
 require_once __DIR__ . '/../../config/database/db.php';
+require_once __DIR__ . '/../models/User.php';
+
+$userModel = new User($conn);
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -12,11 +15,7 @@ if (empty($username) || empty($password) || empty($email)) {
 }
 
 // Check if the username or email already exists
-$sql = "SELECT * FROM users WHERE username = ? OR email = ? LIMIT 1";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param('ss', $username, $email);
-$stmt->execute();
-$result = $stmt->get_result();
+$result = $userModel->checkAlreadyExist($username,$email);
 $user = $result->fetch_assoc();
 
 if ($user) {

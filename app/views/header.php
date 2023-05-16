@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>My CRM</title>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css">
 </head>
 <body>
     <header>
