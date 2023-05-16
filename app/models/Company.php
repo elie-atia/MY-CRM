@@ -16,20 +16,15 @@ class Company {
   }
 
 
-  public function createCompany($username, $password) {
-    $stmt = $this->conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
-    $stmt->bind_param("ss", $username, $password);
+  public function createCompany($company_name, $city, $sector,$email,$creation_date,$user_id) {
+    $stmt = $this->conn->prepare("INSERT INTO companies (company_name, city, sector, email, creation_date, user_id) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssi",$company_name, $city, $sector,$email,$creation_date,$user_id);
     return $stmt->execute();
   }
 
-  public function updateUser($id, $username, $password) {
-    $stmt = $this->conn->prepare("UPDATE users SET username=?, password=? WHERE id=?");
-    $stmt->bind_param("ssi", $username, $password, $id);
-    return $stmt->execute();
-  }
 
-  public function deleteUser($id) {
-    $stmt = $this->conn->prepare("DELETE FROM users WHERE id=?");
+  public function deleteCompany($id) {
+    $stmt = $this->conn->prepare("DELETE FROM companies WHERE id=?");
     $stmt->bind_param("i", $id);
     return $stmt->execute();
   }

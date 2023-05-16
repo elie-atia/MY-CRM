@@ -1,35 +1,30 @@
 <?php
 require_once __DIR__ . '/../../config/database/db.php';
-require_once __DIR__ . '/../models/Contact.php';
+require_once __DIR__ . '/../models/Company.php';
 
-$contactModel = new Contact($conn);
+$CompanyModel = new Company($conn);
 
 $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
   case 'GET':
-    if(isset($_GET['id'])) {
-      $id = $_GET['id'];
-      $result = $contactModel->getContact($id);
+    if(isset($_GET['user_id'])) {
+      $user_id = $_GET['user_id'];
+      $result = $CompanyModel->getAllUserCompanies($user_id);
       $row = mysqli_fetch_assoc($result);
       echo json_encode($row);
-    } else {
-      $result = $contactModel->getAllContacts();
-      $rows = array();
-      while($r = mysqli_fetch_assoc($result)) {
-        $rows[] = $r;
-      }
-      echo json_encode($rows);
     }
     break;
 
   case 'POST':
-    $name = $_POST['name'];
+    $company_name = $_POST['company_name'];
+    $city = $_POST['city'];
+    $sector = $_POST['sector'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $company = $_POST['company'];
+    $creation_date = $_POST['creation_date'];
+    $user_id = $_POST['user_id'];
 
-    if ($contactModel->createContact($name, $email, $phone, $company)) {
+    if ($CompanyModel->createCompany($company_name, $city, $sector,$email,$creation_date,$user_id)) {
       echo "New record created successfully";
     } else {
       echo "Error: " . $conn->error;

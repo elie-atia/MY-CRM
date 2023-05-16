@@ -1,22 +1,24 @@
 $(document).ready(function() {
 
     // Fetch all contacts on page load
-    fetchContacts();
+    // fetchCompanies();
 
 
-    $("#contact-form").on("submit", function(e) {
+    $("#company-form").on("submit", function(e) {
         e.preventDefault();
         
         var formData = {
-            name: $("#name").val(),
-            email: $("#email").val(), 
-            phone: $("#phone").val(),
-            company: $("#company").val()
+            company_name: $("#company_name").val(),
+            city: $("#city").val(), 
+            sector: $("#sector").val(),
+            email: $("#email").val(),
+            creation_date: $("#creation_date").val(),
+            user_id: $("#user_id").val(),
         };
         
         $.ajax({
             type: "POST",
-            url: "http://localhost:3000/server/api/contacts.php",
+            url: "http://localhost:3000/server/api/company.php",
             data: formData,
             success: function(response) {
                 alert(response);
@@ -28,10 +30,10 @@ $(document).ready(function() {
     });
 
 
-    function fetchContacts() {
+    function fetchCompanies() {
         $.ajax({
             type: "GET",
-            url: "http://localhost:3000/server/api/contacts.php",
+            url: "http://localhost:3000/server/api/company.php",
             success: function(response) {
                 var contacts = JSON.parse(response);
                 // Here you can update the DOM with the fetched contacts
