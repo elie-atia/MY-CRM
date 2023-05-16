@@ -1,18 +1,12 @@
 <?php
 
-class User {
+class Company {
   private $conn;
 
   public function __construct($conn) {
     $this->conn = $conn;
   }
 
-  public function checkAlreadyExist($username,$email) {
-    $stmt = $this->conn->prepare("SELECT * FROM users WHERE username = ? OR email = ? LIMIT 1");
-    $stmt->bind_param("ss", $username,$email);
-    $stmt->execute();
-    return $stmt->get_result();
-  }
 
   public function getUser($id) {
     $stmt = $this->conn->prepare("SELECT * FROM users WHERE id = ?");
@@ -27,11 +21,10 @@ class User {
     return $result;
   }
 
-  public function createUser($username, $hashed_password,$email) {
-    $stmt = $this->conn->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
-    $stmt->bind_param('sss', $username, $hashed_password, $email);
-    $stmt->execute();
-    return $stmt->affected_rows;
+  public function createUser($username, $password) {
+    $stmt = $this->conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+    $stmt->bind_param("ss", $username, $password);
+    return $stmt->execute();
   }
 
   public function updateUser($id, $username, $password) {

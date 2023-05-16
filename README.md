@@ -42,6 +42,8 @@ MIT
     -->run:   \connect elie@localhost
     -->run    CREATE DATABASE my_db;
     -->run    SHOW DATABASES;
+    -->run    use my_db;
+    -->run    SHOW TABLES;
     -->connect via php file, using mysqli 
     -->Crud operation: CREATE TABLE, INSERT INTO, SELECT, UPDATE, DELETE FROM...
     --> run mysql server: open powershell as administrator and run this: 

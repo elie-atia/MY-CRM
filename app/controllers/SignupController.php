@@ -27,12 +27,9 @@ if ($user) {
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Insert the new user into the database
-$sql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param('sss', $username, $hashed_password, $email);
-$stmt->execute();
+$result = $userModel->createUser($username,$hashed_password, $email);
 
-if ($stmt->affected_rows > 0) {
+if ($result > 0) {
     echo "User registered successfully!";
 } else {
     echo "Error: " . $conn->error;
