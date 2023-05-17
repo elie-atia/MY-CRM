@@ -4,7 +4,7 @@
     background-size: cover; /* Cela permet de s'assurer que l'image couvre tout l'écran */
     background-position: center; /* Cela centre l'image */
 
-  }
+  } 
 
 /* CSS pour le div bleu avec du texte */
 .banner {
@@ -71,7 +71,7 @@
 }
 
 .modal {
-    /* display: none; Popup invisible par défaut */
+    display: none; /*Popup invisible par défaut*/
     position: fixed; /* Rester en place */
     z-index: 1; /* Se situer au-dessus des autres éléments */
     left: 0;

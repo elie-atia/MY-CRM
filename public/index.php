@@ -1,9 +1,9 @@
 <?php
 
-$request = str_replace('/public/index.php', '', $_SERVER['REQUEST_URI']);
+$request_temp = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$request = str_replace('/public/index.php', '', $request_temp);
 
 switch ($request) {
-    
     case '/' :
         require __DIR__ . '/../app/views/home.php';
         break;
@@ -15,6 +15,12 @@ switch ($request) {
         break;
     case '/logout' :
         require __DIR__ . '/../app/views/logout.php';
+        break;
+    case '/send-mail' :
+        require __DIR__ . '/../app/views/send-mail.php';
+        break;
+    case '/see-interaction' :
+        require __DIR__ . '/../app/views/see-interaction.php';
         break;
     // etc.
     default:

@@ -1,0 +1,54 @@
+.bg-image {
+  background-image: url('/public/assets/img/blue.jpg');
+  background-size: cover; /* Cela permet de s'assurer que l'image couvre tout l'écran */
+  background-position: center; /* Cela centre l'image */
+
+}
+
+
+.container {
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% du haut, centré horizontalement */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Largeur du contenu */
+  
+}
+
+.container-select {
+  margin: 15px;
+}
+
+.select {
+  font-size: 1rem;
+  color: black;
+  background-color: #CAF0F8;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+
+.container-mail-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    margin: 0 20px;
+}
+
+.mail-content {
+    grid-column: span 9;
+    display: inline-block;
+    background-color: #48CAE4;
+    padding: 10px;
+}
+
+.button {
+  grid-column: span 2;
+  display: inline-block;
+  background-color: #0077B6;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: auto auto 20px auto;
+}
