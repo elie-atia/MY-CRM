@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../../config/database/db.php';
-require_once __DIR__ . '/../models/Company.php';
+require_once __DIR__ . '/../models/Interaction.php';
 
-$CompanyModel = new Company($conn);
+$InteractionModel = new Interaction($conn);
 
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -10,24 +10,23 @@ switch ($method) {
   case 'GET':
     if(isset($_GET['user_id'])) {
       $user_id = $_GET['user_id'];
-      $result = $CompanyModel->getAllUserCompanies($user_id);
-      $companies = array();
+      $result = $InteractionModel->getInteractionOfUser($user_id);
+      $interactions = array();
       while($row = mysqli_fetch_assoc($result)) {
-        $companies[] = $row;
+        $interactions[] = $row;
       }
-      echo json_encode($companies);
-    }
+      echo json_encode($interactions);
+  }
     break;
 
   case 'POST':
-    $company_name = $_POST['company_name'];
-    $city = $_POST['city'];
-    $sector = $_POST['sector'];
-    $email = $_POST['email'];
-    $creation_date = $_POST['creation_date'];
+    $interaction_type = $_POST['type'];
+    $interaction_date = $_POST['date'];
+    $notes = $_POST['notes'];
+    $company_id = $_POST['company_id'];
     $user_id = $_POST['user_id'];
 
-    if ($CompanyModel->createCompany($company_name, $city, $sector,$email,$creation_date,$user_id)) {
+    if ($InteractionModel->createInteraction($interaction_type, $interaction_date, $notes, $company_id, $user_id)) {
       echo "New record created successfully";
     } else {
       echo "Error: " . $conn->error;

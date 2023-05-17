@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
-    // Fetch all contacts on page load
-    // fetchCompanies();
-
+    // Fetch all ... on page load
+     fetchUserCompanies(user_id);
+     fetchMails();
+     fetchUserInteractions(user_id);
 
     $("#company-form").on("submit", function(e) {
         e.preventDefault();
@@ -30,24 +31,64 @@ $(document).ready(function() {
     });
 
 
-    function fetchCompanies() {
+    function fetchUserCompanies(user_id) {
         $.ajax({
             type: "GET",
-            url: "http://localhost:3000/server/api/company.php",
+            url: "http://localhost:3000/server/api/company.php?user_id=" + user_id,
             success: function(response) {
-                var contacts = JSON.parse(response);
+                var companies = JSON.parse(response);
                 // Here you can update the DOM with the fetched contacts
                 // For instance, if you have a table to list the contacts
-                var contactList = '';
-                $.each(contacts, function(index, contact) {
-                    contactList += '<tr><td>' + contact.name + '</td><td>' + contact.email + '</td><td>' + contact.phone + '</td><td>' + contact.company + '</td></tr>';
+                var companiesList = '';
+                $.each(companies, function(index, company) {
+                    companiesList += '<tr><td>' + company.company_name + '</td><td>' + company.creation_date + '</td><td>' + company.email + '</td><td>' + company.sector + '</td></tr>';
                 });
-                $('#contact-table').html(contactList);
+                $('#company-table').html(companiesList);
             },
             error: function(response) {
                 alert('Error: ' + response);
             }
         });
-    }
+    };
+
+    function fetchMails() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/server/api/mail.php",
+            success: function(response) {
+                var mails = JSON.parse(response);
+                // Here you can update the DOM with the fetched contacts
+                // For instance, if you have a table to list the contacts
+                var mailsList = '';
+                $.each(mails, function(index, mail) {
+                    mailsList += '<tr><td>' + mail.mail_type + '</td><td>' + mail.mail_subject + '</td><td>' + mail.mail_content + '</td></tr>';
+                });
+                $('#mail-table').html(mailsList);
+            },
+            error: function(response) {
+                alert('Error: ' + response);
+            }
+        });
+    };
+
+    function fetchUserInteractions(user_id) {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/server/api/interaction.php?user_id=" + user_id,
+            success: function(response) {
+                var interactions = JSON.parse(response);
+                // Here you can update the DOM with the fetched contacts
+                // For instance, if you have a table to list the contacts
+                var interactionsList = '';
+                $.each(interactions, function(index, interaction) {
+                    interactionsList += '<tr><td>' + interaction.interaction_type + '</td><td>' + interaction.interaction_date + '</td><td>' + interaction.notes + '</td><td>' + interaction.company_id + '</td><td>'+ interaction.user_id + '</td></tr>';
+                });
+                $('#interaction-table').html(interactionsList);
+            },
+            error: function(response) {
+                alert('Error: ' + response);
+            }
+        });
+    };
 
 });

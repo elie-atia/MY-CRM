@@ -1,33 +1,26 @@
 <?php
 require_once __DIR__ . '/../../config/database/db.php';
-require_once __DIR__ . '/../models/Company.php';
+require_once __DIR__ . '/../models/Mail.php';
 
-$CompanyModel = new Company($conn);
+$MailModel = new Mail($conn);
 
 $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
   case 'GET':
-    if(isset($_GET['user_id'])) {
-      $user_id = $_GET['user_id'];
-      $result = $CompanyModel->getAllUserCompanies($user_id);
-      $companies = array();
-      while($row = mysqli_fetch_assoc($result)) {
-        $companies[] = $row;
-      }
-      echo json_encode($companies);
+    $result = $MailModel->getAllMails();
+    $mails = array();
+    while($row = mysqli_fetch_assoc($result)) {
+      $mails[] = $row;
     }
+    echo json_encode($mails);
     break;
 
   case 'POST':
-    $company_name = $_POST['company_name'];
-    $city = $_POST['city'];
-    $sector = $_POST['sector'];
-    $email = $_POST['email'];
-    $creation_date = $_POST['creation_date'];
-    $user_id = $_POST['user_id'];
-
-    if ($CompanyModel->createCompany($company_name, $city, $sector,$email,$creation_date,$user_id)) {
+    $mail_type = $_POST['type'];
+    $mail_subject = $_POST['subject'];
+    $mail_content = $_POST['content'];
+    if ($MailModel->createMail($mail_type, $mail_subject, $mail_content)) {
       echo "New record created successfully";
     } else {
       echo "Error: " . $conn->error;
