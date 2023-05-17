@@ -1,4 +1,7 @@
-
+<?php
+// Commencez la session PHP pour accéder aux variables de session.
+session_start();
+?>
 
 
 <!DOCTYPE html>
@@ -6,27 +9,17 @@
 <head>
     <title>My CRM</title>
     <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/assets/css/header.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/public/index.php/">Home</a></li>
-                <?php
-                session_start();  // Start the session
-                if (isset($_SESSION['user_id'])) {
-                    // If the user is logged in, display their name and a logout link
-                    echo '<li>Welcome, ' . htmlspecialchars($_SESSION['username']) . '</li>';
-                    echo '<li><a href="/public/index.php/logout">Logout</a></li>';
-                } else {
-                    // If the user is not logged in, display the Signup and Login links
-                    echo '<li><a href="/public/index.php/signup">Signup</a></li>';
-                    echo '<li><a href="/public/index.php/login">Login</a></li>';
-                }
-                ?>
-
-            </ul>
-        </nav>  
+        <div class="header">
+            <a class="site-name" href="/public/index.php/">CRM</a>
+            
+            <?php if (isset($_SESSION['user_id'])): ?>
+            <a class="logout" href="/public/index.php/logout">Logout</a>
+            <?php endif; ?>
+        </div>
     </header>
 </body>
 </html>

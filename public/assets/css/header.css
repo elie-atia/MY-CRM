@@ -1,0 +1,21 @@
+.header {
+    background-color: #03045E;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.header a.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+  
+.header a.logout {
+    cursor: pointer;
+    color: white;
+}
+  

@@ -1,6 +1,11 @@
-<?php 
-include_once __DIR__ . '/header.php';
-?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accueil</title>
+  <!-- Inclure les fichiers CSS pour l'en-tête et la page d'accueil -->
+  <link rel="stylesheet" type="text/css" href="/public/assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/public/assets/css/home.css">
+
 <script src="/public/assets/js/jquery-3.6.4.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -12,8 +17,67 @@ include_once __DIR__ . '/header.php';
         creationDateField2.value = formattedDate;
     });
 </script>
+</head>
+
+<body class="bg-image">
+<?php 
+include_once __DIR__ . '/header.php';
+?>
+<div class="banner">
+    Welcome to your CRM. Choose to login or sign-up in order to begin!
+</div>
+
+  <div class="buttons">
+    <a class="button" href="/public/index.php/login">Login</a>
+    <a class="button" href="/public/index.php/signup">Signup</a>
+  </div>
+  <?php if (isset($_SESSION['user_id'])): ?>
+  <div class="table-container">
+    <table class="full-width-table">
+    <tr>
+        <th>Company Name</th>
+        <th>City</th>
+        <th>Email</th>
+        <th>Sector</th>
+        <th>Creation date</th>
+        <th>Action</th>
+        <!-- Plus de th pour chaque en-tête de colonne que vous voulez -->
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td><button class="action-button">🔍</button></td>
+
+        <!-- Plus de td pour chaque cellule de données que vous voulez -->
+    </tr>
+    <tr>
+        <td>Data 4</td>
+        <td>Data 5</td>
+        <td>Data 6</td>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td><button class="action-button">🔍</button></td>
+        <!-- Plus de td pour chaque cellule de données que vous voulez -->
+    </tr>
+    <!-- Plus de tr pour chaque ligne que vous voulez -->
+    </table>
+</div>
+<?php endif; ?>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+        <button class="modal-button">Send Mail</button>
+        <button class="modal-button">See Interactions</button>
+        <button class="close">Close</button>
+  </div>
+</div>
+
+
 <div class="container">
-<h2>CRM System</h2>
+<h2>CRM System</h2> 
 <div style="display: flex;">
   <!-- Première moitié de l'écran -->
   <div style="flex: 1;">
@@ -103,6 +167,6 @@ include_once __DIR__ . '/header.php';
         </script>
         <script src="/public/assets/js/home.js"></script>
     </div>
-
-   
+</body>
+</html>
 
