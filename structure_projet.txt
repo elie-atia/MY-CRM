@@ -1,0 +1,27 @@
+MY-CRM
+├── app
+│   ├── controllers
+│   |   └── CompanyController.php
+│   ├── models
+│   |   └── Company.php
+│   └── views
+│       └── header.php
+├── config
+│   └── database
+│       └── db.php
+├── core
+│   ├── helpers
+│   └── libraries
+├── public
+│   ├── assets
+│   |   └── css
+│   |   └── img
+│   |   └── js
+│   └── index.php
+├── server
+│   └── api
+│       └── company.php
+├── vendor
+├── LICENSE
+├── README.md
+└── index.php
