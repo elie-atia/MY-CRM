@@ -4,9 +4,11 @@
   <title>Send Mail</title>
   <!-- Inclure les fichiers CSS pour l'en-tête et la page d'accueil -->
   <link rel="stylesheet" type="text/css" href="/public/assets/css/header.css">
-  <link rel="stylesheet" type="text/css" href="/public/assets/css/home.css">
+  <link rel="stylesheet" type="text/css" href="/public/assets/css/see-interaction.css">
 
 <script src="/public/assets/js/jquery-3.6.4.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
 
 <body class="bg-image">
@@ -14,19 +16,129 @@
 include_once __DIR__ . '/header.php';
 ?>
 
-
-  
-  
-
 <div id="myModal" class="modal">
-  <div class="modal-content">
-        <a class="modal-button" href="/public/index.php/send-mail?company_id=1">Send Mail</a>
-        <a class="modal-button" href="/public/index.php/see-interaction?company_id=1">See Interactions</a>
-        <button class="close">Close</button>
+  <div class="modal-content"> 
+  blablablablablablablablablablablablablablblablablablablablablablablablablablaablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+      <button class="close">Close</button>
   </div>
 </div>
 
 
+
+<div class="container">
+  <div class="container-select">
+    Company:
+    <select class="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+  </div>
+    
+  <div class="container-interaction">
+    <div class="text-interaction">
+      Date: blablabla
+    </div>
+    <div class="text-interaction">
+      Event: blablabla
+    </div>
+    <div class="text-interaction">
+      Note: blablabla  
+    </div>
+    <a class="more-button" href="/">more </a>
+  </div>
+
+  <div class="container-arrow">
+    <i style='font-size:24px' class='fas'>&#xf062;</i>
+  </div>
+
+  <div class="container-interaction">
+    <div class="text-interaction">
+      Date: blablabla
+    </div>
+    <div class="text-interaction">
+      Event: blablabla
+    </div>
+    <div class="text-interaction">
+      Note: blablabla  
+    </div>
+    <a class="more-button" href="/">more </a>
+  </div>
+
+  <div class="container-arrow">
+    <i style='font-size:24px' class='fas'>&#xf062;</i>
+  </div>
+
+  <div class="container-interaction">
+    <div class="text-interaction">
+      Date: blablabla
+    </div>
+    <div class="text-interaction">
+      Event: blablabla
+    </div>
+    <div class="text-interaction">
+      Note: blablabla  
+    </div>
+    <a class="more-button" href="/">more </a>
+  </div>
+
+  <div class="container-arrow">
+    <i style='font-size:24px' class='fas'>&#xf062;</i>
+  </div>
+
+  <div class="container-interaction">
+    <div class="text-interaction">
+      Date: blablabla
+    </div>
+    <div class="text-interaction">
+      Event: blablabla
+    </div>
+    <div class="text-interaction">
+      Note: blablabla  
+    </div>
+    <a class="more-button" href="/">more </a>
+  </div>
+
+  <div class="container-arrow">
+    <i style='font-size:24px' class='fas'>&#xf062;</i>
+  </div>
+
+  <div class="container-interaction">
+    <div class="text-interaction">
+      Date: blablabla
+    </div>
+    <div class="text-interaction">
+      Event: blablabla
+    </div>
+    <div class="text-interaction">
+      Note: blablabla  
+    </div>
+    <a class="more-button" href="/">more </a>
+  </div>
+
+  <div class="container-arrow">
+    <i style='font-size:24px' class='fas'>&#xf062;</i>
+  </div>
+
+  <div class="container-interaction">
+    <div class="text-interaction">
+      Date: blablabla
+    </div>
+    <div class="text-interaction">
+      Event: blablabla
+    </div>
+    <div class="text-interaction">
+      Note: blablabla  
+    </div>
+    <button class="more-button2">more </button>
+  </div>
+
+
+
+</div>
+
+
+<script src="/public/assets/js/see-interaction.js"></script>
 
 </body>
 </html>

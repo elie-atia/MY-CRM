@@ -1,0 +1,110 @@
+.bg-image {
+  background-image: url('/public/assets/img/blue.jpg');
+  background-size: cover; /* Cela permet de s'assurer que l'image couvre tout l'écran */
+  background-position: center; /* Cela centre l'image */
+
+}
+
+
+.container {
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% du haut, centré horizontalement */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Largeur du contenu */
+  
+}
+
+.container-select {
+  margin: 15px;
+  font-size: 1.3rem;
+}
+
+.select {
+  font-size: 1rem;
+  color: black;
+  background-color: #CAF0F8;
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.container-interaction {
+    background-color: #CAF0F8;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    margin: 5px;
+}
+
+.text-interaction {
+  font-size: 1.2rem;
+  grid-column: span 3;
+}
+
+
+.more-button {
+  grid-column: span 3;
+  display: inline-block;
+  background-color: #0077B6;
+  padding:2px 4px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  justify-self: end;
+  color: black;
+}
+
+.container-arrow {
+  margin: 5px;
+  text-align: center;
+}
+
+.modal {
+  display: none; /*Popup invisible par défaut*/
+  position: fixed; /* Rester en place */
+  z-index: 1; /* Se situer au-dessus des autres éléments */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largeur totale */
+  height: 100%; /* Hauteur totale */
+  overflow: auto; /* Permettre le défilement si nécessaire */
+  background-color: rgba(0,0,0,0.4); /* Noir avec un peu de transparence */
+}
+
+/* Contenu du Popup */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% du haut, centré horizontalement */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Largeur du contenu */
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bouton de fermeture du popup */
+.close {
+  background-color: #0077B6;
+  color: black;
+  padding: 10px 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: auto;
+
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

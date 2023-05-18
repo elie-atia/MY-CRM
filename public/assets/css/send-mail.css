@@ -17,6 +17,8 @@
 
 .container-select {
   margin: 15px;
+  font-size: 1.3rem;
+  margin-left: 25px;
 }
 
 .select {
@@ -25,6 +27,7 @@
   background-color: #CAF0F8;
   border: 2px solid #ccc;
   padding: 10px;
+  margin: 10px;
 }
 
 .container-mail-button {
@@ -40,32 +43,35 @@
     padding: 10px;
 }
 
-.mail-title {
-  text-decoration: underline;
-  white-space: nowrap;
+.email-heading {
   font-size: 1.5rem;
   padding: 10px ;
 }
 
-.mail-text {
-  display: inline-block;
+.email-subject {
+  text-decoration: underline;
+}
+
+.email-body {
   font-size: 1rem;
 }
 
-.mail-content-text {
+.email-body-content {
   font-size: 1rem;
-  padding-left:10px;
+  padding-left:15px;
   overflow-wrap: break-word;
 }
 
 .button {
-  grid-column: span 2;
+  grid-column: span 3;
   display: inline-block;
   background-color: #0077B6;
-  padding: 10px 20px;
+  color: black;
+  padding: 5px 10px;
   border-radius: 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin: auto auto 20px auto;
+  justify-self: end;
 }

@@ -162,7 +162,7 @@ include_once __DIR__ . '/header.php';
   </table>
 </div>
     </div>
-        <script type="text/javascript">
+    <script type="text/javascript">
             var user_id = "<?php echo $_SESSION['user_id']; ?>";
         </script>
         <script src="/public/assets/js/home.js"></script>

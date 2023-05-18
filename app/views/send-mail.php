@@ -28,22 +28,22 @@ include_once __DIR__ . '/header.php';
     
     <div class="container-mail-button">
         <div class="container-mail">
-            <div class="mail-title">
-                Subject:
-                <div class="mail-text">blablabla</div>
+
+            <div class="email-heading">
+                <span class="email-subject">Subject:</span> <span class="email-body">blablabla</span>
             </div>
-            <div class="mail-title">
-                To:
-                <div class="mail-text">blablabla</div>
+
+            <div class="email-heading">
+                <span class="email-subject">To:</span> <span class="email-body">blablabla</span>
             </div>
-            <div class="mail-title">
-                Content:
+
+            <div class="email-heading">
+                <span class="email-subject">Content:</span> 
             </div>
-            <div class="mail-content-text">
-            blablablablablbblablablablablablablablablablablablaablablablablablablablalablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla   
-            </div>
+            <div class="email-body-content">blablablablablablablablablabblablablablablablablablablablablablablablablablablablablablablabblablablablablablablablablabblablablablablablablablablablablablablablablablablablablablablablablablalablablablablablablablablablablablablablablalablablalablablablablablablablablablablablablablabla</div>
         </div>
-        <button class="button">Send Mail </button>
+
+        <a class="button" href="/">Send Mail </a>
     </div>
 
 </div>
