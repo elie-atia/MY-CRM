@@ -18,8 +18,15 @@ include_once __DIR__ . '/header.php';
 
 <div id="myModal" class="modal">
   <div class="modal-content"> 
-  blablablablablablablablablablablablablablblablablablablablablablablablablablaablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+    <div class="modal-title">
+      Note:
+    </div>
+    <span class="modal-text">
+      blablablablablablablablablablablablablablblablablablablablablablablablablablaablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+    </span>
+    <div class="close-container"> 
       <button class="close">Close</button>
+    </div>
   </div>
 </div>
 
