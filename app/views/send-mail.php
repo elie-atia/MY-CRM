@@ -26,15 +26,22 @@ include_once __DIR__ . '/header.php';
         </select>
     </div>
     
-    <div class="container-mail-content">
-        <div class="mail-content">
-            <p>hellohellohellohellohellohello</p>
-            <p>hellohellohellohellohellohello</p>
-
-            <p>hellohellohellohellohellohello</p>
-
-            <p>hellohellohellohellohellohello</p>
-
+    <div class="container-mail-button">
+        <div class="container-mail">
+            <div class="mail-title">
+                Subject:
+                <div class="mail-text">blablabla</div>
+            </div>
+            <div class="mail-title">
+                To:
+                <div class="mail-text">blablabla</div>
+            </div>
+            <div class="mail-title">
+                Content:
+            </div>
+            <div class="mail-content-text">
+            blablablablablbblablablablablablablablablablablablaablablablablablablablalablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla   
+            </div>
         </div>
         <button class="button">Send Mail </button>
     </div>

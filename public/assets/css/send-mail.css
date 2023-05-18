@@ -27,18 +27,35 @@
   padding: 10px;
 }
 
-.container-mail-content {
+.container-mail-button {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
     margin: 0 20px;
 }
 
-.mail-content {
+.container-mail {
     grid-column: span 9;
-    display: inline-block;
     background-color: #48CAE4;
     padding: 10px;
+}
+
+.mail-title {
+  text-decoration: underline;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  padding: 10px ;
+}
+
+.mail-text {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.mail-content-text {
+  font-size: 1rem;
+  padding-left:10px;
+  overflow-wrap: break-word;
 }
 
 .button {
