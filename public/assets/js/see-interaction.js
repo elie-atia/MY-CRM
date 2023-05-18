@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // Lorsque l'utilisateur clique sur le bouton, ouvrir le popup
-    $('.more-button2').click(function() {
+    $('.more-button').click(function() {
         console.log("flag 1")
         $('#myModal').show();
     });

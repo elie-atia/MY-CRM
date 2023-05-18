@@ -33,27 +33,34 @@
     background-color: #CAF0F8;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
     margin: 5px;
+}
+
+.interaction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 
 .text-interaction {
   font-size: 1.2rem;
-  grid-column: span 3;
+  grid-column: span 1;
+}
+
+.container-note-button {
+  display: flex;
+  justify-content:  space-between;
 }
 
 
 .more-button {
-  grid-column: span 3;
-  display: inline-block;
   background-color: #0077B6;
   padding:2px 4px;
   border-radius: 20px;
   text-align: center;
   text-decoration: none;
   font-size: 1.2rem;
-  justify-self: end;
   color: black;
 }
 

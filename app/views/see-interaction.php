@@ -43,6 +43,7 @@ include_once __DIR__ . '/header.php';
   </div>
     
   <div class="container-interaction">
+  <div class="interaction-grid">
     <div class="text-interaction">
       Date: blablabla
     </div>
@@ -50,16 +51,43 @@ include_once __DIR__ . '/header.php';
       Event: blablabla
     </div>
     <div class="text-interaction">
-      Note: blablabla  
+      <div class="container-note-button">
+        Note: blablfffabla... 
+        <button class="more-button">more </button>
+      </div>
     </div>
-    <a class="more-button" href="/">more </a>
   </div>
+</div>
+
+  <div class="container-arrow">
+    <i style='font-size:24px' class='fas'>&#xf062;</i>
+  </div>
+
+<div class="container-interaction">
+  <div class="interaction-grid">
+    <div class="text-interaction">
+      Date: blablabla
+    </div>
+    <div class="text-interaction">
+      Event: blablabla
+    </div>
+    <div class="text-interaction">
+      <div class="container-note-button">
+        Note: blablabla... 
+        <button class="more-button">more </button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+ 
 
   <div class="container-arrow">
     <i style='font-size:24px' class='fas'>&#xf062;</i>
   </div>
 
   <div class="container-interaction">
+  <div class="interaction-grid">
     <div class="text-interaction">
       Date: blablabla
     </div>
@@ -67,16 +95,20 @@ include_once __DIR__ . '/header.php';
       Event: blablabla
     </div>
     <div class="text-interaction">
-      Note: blablabla  
+      <div class="container-note-button">
+        Note: blablfffabla... 
+        <button class="more-button">more </button>
+      </div>
     </div>
-    <a class="more-button" href="/">more </a>
   </div>
+</div>
 
   <div class="container-arrow">
     <i style='font-size:24px' class='fas'>&#xf062;</i>
   </div>
 
   <div class="container-interaction">
+  <div class="interaction-grid">
     <div class="text-interaction">
       Date: blablabla
     </div>
@@ -84,16 +116,20 @@ include_once __DIR__ . '/header.php';
       Event: blablabla
     </div>
     <div class="text-interaction">
-      Note: blablabla  
+      <div class="container-note-button">
+        Note: blablfffabla... 
+        <button class="more-button">more </button>
+      </div>
     </div>
-    <a class="more-button" href="/">more </a>
   </div>
+</div>
 
   <div class="container-arrow">
     <i style='font-size:24px' class='fas'>&#xf062;</i>
   </div>
 
   <div class="container-interaction">
+  <div class="interaction-grid">
     <div class="text-interaction">
       Date: blablabla
     </div>
@@ -101,16 +137,20 @@ include_once __DIR__ . '/header.php';
       Event: blablabla
     </div>
     <div class="text-interaction">
-      Note: blablabla  
+      <div class="container-note-button">
+        Note: blablfffabla... 
+        <button class="more-button">more </button>
+      </div>
     </div>
-    <a class="more-button" href="/">more </a>
   </div>
+</div>
 
   <div class="container-arrow">
     <i style='font-size:24px' class='fas'>&#xf062;</i>
   </div>
 
   <div class="container-interaction">
+  <div class="interaction-grid">
     <div class="text-interaction">
       Date: blablabla
     </div>
@@ -118,29 +158,15 @@ include_once __DIR__ . '/header.php';
       Event: blablabla
     </div>
     <div class="text-interaction">
-      Note: blablabla  
+      <div class="container-note-button">
+        Note: blablfffabla... 
+        <button class="more-button">more </button>
+      </div>
     </div>
-    <a class="more-button" href="/">more </a>
   </div>
+</div>
 
-  <div class="container-arrow">
-    <i style='font-size:24px' class='fas'>&#xf062;</i>
   </div>
-
-  <div class="container-interaction">
-    <div class="text-interaction">
-      Date: blablabla
-    </div>
-    <div class="text-interaction">
-      Event: blablabla
-    </div>
-    <div class="text-interaction">
-      Note: blablabla  
-    </div>
-    <button class="more-button2">more </button>
-  </div>
-
-
 
 </div>
 
