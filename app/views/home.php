@@ -24,12 +24,15 @@
 include_once __DIR__ . '/header.php';
 ?>
 <div class="banner">
-    Welcome to your CRM. Choose to login or sign-up in order to begin!
+    Welcome to your CRM. 
+    <?php if (!isset($_SESSION['user_id'])): ?>Choose to login or sign-up in order to begin!
+        <?php endif; ?>
+
 </div>
 
   
   
-  <?php if (isset($_SESSION['user_id'])): ?>
+  <?php if (isset($_SESSION['user_id'])): ?>    
   <div class="table-container">
     <table id="company-table" class="full-width-table">
     <thead>
