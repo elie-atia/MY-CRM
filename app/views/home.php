@@ -31,35 +31,23 @@ include_once __DIR__ . '/header.php';
   
   <?php if (isset($_SESSION['user_id'])): ?>
   <div class="table-container">
-    <table class="full-width-table">
-    <tr>
+    <table id="company-table" class="full-width-table">
+    <thead>
+
+    <tr >
         <th>Company Name</th>
         <th>City</th>
         <th>Email</th>
         <th>Sector</th>
-        <th>Creation date</th>
+        <th>Creation date</th>  
         <th>Action</th>
         <!-- Plus de th pour chaque en-tête de colonne que vous voulez -->
     </tr>
-    <tr>
-        <td>Data 1</td>
-        <td>Data 2</td>
-        <td>Data 3</td>
-        <td>Data 1</td>
-        <td>Data 2</td>
-        <td><button class="action-button">🔍</button></td>
+    </thead>
+    <tbody>
+    </tbody>
 
-        <!-- Plus de td pour chaque cellule de données que vous voulez -->
-    </tr>
-    <tr>
-        <td>Data 4</td>
-        <td>Data 5</td>
-        <td>Data 6</td>
-        <td>Data 1</td>
-        <td>Data 2</td>
-        <td><button class="action-button">🔍</button></td>
-        <!-- Plus de td pour chaque cellule de données que vous voulez -->
-    </tr>
+
     <!-- Plus de tr pour chaque ligne que vous voulez -->
     </table>
 </div>
@@ -111,9 +99,6 @@ include_once __DIR__ . '/header.php';
 
         <input type="submit" value="Submit">
     </form> 
-    <table id="company-table">
-        <!-- companies will be dynamically populated here -->
-    </table>
     </div>
 
   <!-- Deuxième moitié de l'écran -->

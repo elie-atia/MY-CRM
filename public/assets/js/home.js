@@ -41,9 +41,9 @@ $(document).ready(function() {
                 // For instance, if you have a table to list the contacts
                 var companiesList = '';
                 $.each(companies, function(index, company) {
-                    companiesList += '<tr><td>' + company.company_name + '</td><td>' + company.creation_date + '</td><td>' + company.email + '</td><td>' + company.sector + '</td></tr>';
+                    companiesList += '<tr><td>' + company.company_name + '</td><td>' + company.city + '</td><td>' + company.email + '</td><td>' + company.sector + '</td><td>' + company.creation_date + `</td><td><button class="action-button">🔍</button></td></tr>`;
                 });
-                $('#company-table').html(companiesList);
+                $('#company-table tbody').html(companiesList);
             },
             error: function(response) {
                 alert('Error: ' + response);
