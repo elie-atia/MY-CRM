@@ -12,9 +12,10 @@ $(document).ready(function () {
             url: "http://localhost:3000/server/api/login.php",
             data: formData,
             success: function (response) {
-                alert(response);
                 // Save the token in the local storage
                 localStorage.setItem('userToken', response.token);
+                window.location.href = "http://localhost:3000/public/index.php/";
+
             },
             error: function (response) {
                 alert('Error: ' + response);

@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../../config/database/db.php';
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = $_POST['password']; 
 
 $sql = "SELECT * FROM users WHERE username = ? LIMIT 1";
 $stmt = $conn->prepare($sql);
