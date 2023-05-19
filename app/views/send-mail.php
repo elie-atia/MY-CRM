@@ -18,19 +18,16 @@ include_once __DIR__ . '/header.php';
 <div class="container">
 
     <div class="container-select">
-        Type of Mail:
-        <select class="select">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+        Type of Mail: 
+        <select id="mail-select" class="mail-select">
         </select>
     </div>
     
     <div class="container-mail-button">
         <div class="container-mail">
 
-            <div class="email-heading">
-                <span class="email-subject">Subject:</span> <span class="email-body">blablabla</span>
+            <div id="email-heading-subject" class="email-heading">
+                <span class="email-subject">Subject:</span> <span class="email-body"></span>
             </div>
 
             <div class="email-heading">
@@ -40,7 +37,7 @@ include_once __DIR__ . '/header.php';
             <div class="email-heading">
                 <span class="email-subject">Content:</span> 
             </div>
-            <div class="email-body-content">blablablablablablablablablabblablablablablablablablablablablablablablablablablablablablablabblablablablablablablablablabblablablablablablablablablablablablablablablablablablablablablablablablalablablablablablablablablablablablablablablalablablalablablablablablablablablablablablablablabla</div>
+            <div class="email-body-content"></div>
         </div>
 
         <a class="button" href="/">Send Mail </a>
@@ -49,6 +46,7 @@ include_once __DIR__ . '/header.php';
 </div>
 
 
+<script src="/public/assets/js/send-mail.js"></script>
 
 </body>
 </html>
