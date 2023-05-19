@@ -41,12 +41,16 @@ $(document).ready(function () {
                 // For instance, if you have a table to list the contacts
                 var companiesList = '';
                 $.each(companies, function (index, company) {
-                    companiesList += '<tr><td>' + company.company_name + '</td><td>' + company.city + '</td><td>' + company.email + '</td><td>' + company.sector + '</td><td>' + company.creation_date + `</td><td><button class="action-button">🔍</button></td></tr>`;
+                    companiesList += '<tr><td>' + company.company_name + '</td><td>' + company.city + '</td><td>' + company.email + '</td><td>' + company.sector + '</td><td>' + company.creation_date + `</td><td><button class="action-button" data-company-id="${company.id}">🔍</button></td></tr>`;
                 });
                 $('#company-table tbody').html(companiesList);
 
                 // Attach click event here
                 $('.action-button').click(function () {
+                    var companyId = $(this).attr('data-company-id');
+                    $('#myModal #send-mail-button').attr('href',"/public/index.php/send-mail?company_id=" + companyId);
+                    $('#myModal #see-interaction-button').attr('href',"/public/index.php/see-interaction?company_id=" + companyId);
+
                     $('#myModal').show();
                 });
             },

@@ -65,8 +65,8 @@ include_once __DIR__ . '/header.php';
 
 <div id="myModal" class="modal">
   <div class="modal-content">
-        <a class="modal-button" href="/public/index.php/send-mail?company_id=1">Send Mail</a>
-        <a class="modal-button" href="/public/index.php/see-interaction?company_id=1">See Interactions</a>
+        <a class="modal-button" id="send-mail-button">Send Mail</a>
+        <a class="modal-button" id="see-interaction-button" href="/public/index.php/see-interaction?company_id=1">See Interactions</a>
         <button class="close">Close</button>
   </div>
 </div>
