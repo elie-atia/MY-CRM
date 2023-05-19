@@ -27,10 +27,8 @@ include_once __DIR__ . '/header.php';
     Welcome to your CRM. Choose to login or sign-up in order to begin!
 </div>
 
-  <div class="buttons">
-    <a class="button" href="/public/index.php/login">Login</a>
-    <a class="button" href="/public/index.php/signup">Signup</a>
-  </div>
+  
+  
   <?php if (isset($_SESSION['user_id'])): ?>
   <div class="table-container">
     <table class="full-width-table">
@@ -65,6 +63,13 @@ include_once __DIR__ . '/header.php';
     <!-- Plus de tr pour chaque ligne que vous voulez -->
     </table>
 </div>
+<?php else: ?>
+
+<div class="buttons">
+    <a class="button" href="/public/index.php/login">Login</a>
+    <a class="button" href="/public/index.php/signup">Signup</a>
+  </div>
+  
 <?php endif; ?>
 
 <div id="myModal" class="modal">

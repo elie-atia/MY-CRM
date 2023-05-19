@@ -21,8 +21,8 @@ include_once __DIR__ . '/header.php';
     <div class="modal-title">
       Note:
     </div>
-    <span class="modal-text">
-      blablablablablablablablablablablablablablblablablablablablablablablablablablaablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+    <span id="modal-text" class="modal-text">
+            <!-- Le texte de la note apparaîtra ici -->
     </span>
     <div class="close-container"> 
       <button class="close">Close</button>
