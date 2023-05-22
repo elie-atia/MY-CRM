@@ -18,6 +18,7 @@ $(document).ready(function () {
                     mailsList += `<option value="${mail.mail_type}" mail-id="${mail.id}">${mail.mail_type}</option>`;
                 });
                 $('#mail-select').html(mailsList);
+                $('#mail-select').value = mails[0].mail_type;
             },
             error: function (response) {
                 alert('Error: ' + response);
