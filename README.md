@@ -98,3 +98,9 @@ MIT
 - [ ] In the see-interaction page, add a switch, which allows you to put the last interactions in a table. in this same table, add sorting options (by date and event). Implement this optimally.  
 - [ ] In the home page, also add trilling options in the companies table (filter by date and name).  
 - [ ] Create a view for the crm admin, which allows to manage all users: display how many companies, form of email and interaction each user has.  
+
+
+## References to build the view of this CRM
+[Figma tutorial for Beginners: Complete Website from Start to Finish: https://www.youtube.com/watch?v=HZuk6Wkx_Eg]  
+[generate color palettes: https://coolors.co/palettes/trending]  
+[collections of images: for example: https://unsplash.com/collections/1414286/background-for-website]   [choose a font for the text: https://open-foundry.com/fonts]  
