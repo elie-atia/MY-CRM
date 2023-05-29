@@ -48,8 +48,8 @@ $(document).ready(function () {
                 // Attach click event here
                 $('.action-button').click(function () {
                     var companyId = $(this).attr('data-company-id');
-                    $('#myModal #send-mail-button').attr('href',"/public/index.php/send-mail?company_id=" + companyId);
-                    $('#myModal #see-interaction-button').attr('href',"/public/index.php/see-interaction?company_id=" + companyId);
+                    $('#myModal #send-mail-button').attr('href',"/public/send-mail?company_id=" + companyId);
+                    $('#myModal #see-interaction-button').attr('href',"/public/see-interaction?company_id=" + companyId);
 
                     $('#myModal').show();
                 });

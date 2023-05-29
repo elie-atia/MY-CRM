@@ -14,10 +14,10 @@ session_start();
 <body>
     <header>
         <div class="header">
-            <a class="site-name" href="/public/index.php/">CRM</a>
+            <a class="site-name" href="/public/">CRM</a>
             
             <?php if (isset($_SESSION['user_id'])): ?>
-            <a class="logout" href="/public/index.php/logout">Logout</a>
+            <a class="logout" href="/public/logout">Logout</a>
             <?php endif; ?>
         </div>
     </header>

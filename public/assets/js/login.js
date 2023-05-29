@@ -14,7 +14,7 @@ $(document).ready(function () {
             success: function (response) {
                 // Save the token in the local storage
                 localStorage.setItem('userToken', response.token);
-                window.location.href = "http://localhost:3000/public/index.php/";
+                window.location.href = "http://localhost:3000/public/";
 
             },
             error: function (response) {
