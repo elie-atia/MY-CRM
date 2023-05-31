@@ -53,7 +53,7 @@
 
   .full-width-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; 
     background-color: #CAF0F8;
 }
 

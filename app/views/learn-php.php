@@ -1,5 +1,7 @@
 <head>
     <script src="/public/assets/js/jquery-3.6.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/assets/css/learn-php.css">
+
 </head>
 
 <body>
@@ -27,8 +29,21 @@
     </form>
     </br>
 
-    <div id="constantsDiv">
+    <input  type="number" value=10 id="lengthConstants">
 
+    </br>
+    <div id="numberOfConstantsMsg"></div>
+
+    <div class="table-container">
+        <table id="table-constants" class="full-width-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
 
 
