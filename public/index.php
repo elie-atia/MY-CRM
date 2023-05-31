@@ -11,7 +11,7 @@ $router->setBasePath('/public');
 
 $router->map('GET', '/', function() {
     require __DIR__ . '/../app/views/home.php';
-});
+},'login');
 
 $router->map('GET', '/login', function() {
     require __DIR__ . '/../app/views/login.php';
@@ -33,6 +33,12 @@ $router->map('GET', '/see-interaction', function() {
     require __DIR__ . '/../app/views/see-interaction.php';
 });
 
+$router->map('GET', '/learn-php', function() {
+    require __DIR__ . '/../app/views/learn-php.php';
+});
+
+
+
 $match = $router->match();
 
 if (is_array($match) && is_callable($match['target'])) {
@@ -41,3 +47,5 @@ if (is_array($match) && is_callable($match['target'])) {
     // No route was matched
     header($_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
 }
+
+$loginUrl = $router->generate('login');
